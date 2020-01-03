@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: '0xc14m1z',
-    description: "I'm an experienced Frontend Developer with more than ten years of full stack projects behind me as a freelance.",
+    description:
+      "I'm an experienced Frontend Developer with more than ten years of full stack projects behind me as a freelance.",
     author: 'Luca Ramundo'
   },
   plugins: [
