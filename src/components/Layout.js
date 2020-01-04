@@ -17,6 +17,10 @@ import Footer from './Footer'
 
 import useMetadata from '../hooks/useMetadata'
 
+import 'typeface-nunito'
+import 'typeface-source-code-pro'
+
+
 const Container = styled.div `
   max-width: ${ props => props.theme.viewport.maxWidth };
   margin: auto;
