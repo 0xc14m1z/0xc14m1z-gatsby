@@ -9,13 +9,13 @@ import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
 
-import { useStaticQuery, graphql } from 'gatsby'
-
 import GlobalStyle from './GlobalStyle'
 import Theme from './Theme'
 
 import Header from './Header'
 import Footer from './Footer'
+
+import useMetadata from '../hooks/useMetadata'
 
 const Container = styled.div `
   max-width: ${ props => props.theme.viewport.maxWidth };
@@ -27,21 +27,13 @@ const Main = styled.main `
 `
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const { title } = useMetadata()
 
   return (
     <Theme>
       <GlobalStyle />
       <Container>
-        <Header title={ data.site.siteMetadata.title } />
+        <Header title={ title } />
         <Main>{ children }</Main>
         <Footer />
       </Container>
