@@ -1,0 +1,15 @@
+{
+  "slug": "projects/cerved",
+  "period": "2019",
+  "role": "Frontend developer",
+  "client": {
+    "name": "Cerved via Zerouno",
+    "description": "Cerved is the italian leading company for retrieving and handling data about businesses, credits and risk management"
+  },
+  "status": "released",
+  "isPrivate": true,
+  "description": [
+    "I led the development of the frontend of a web application that allows companies with difficult credits to sell their invoices to investors for immediate payment."
+  ],
+  "tags": ["javascript", "react", "redux", "redux-saga"]
+}

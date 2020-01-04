@@ -1,0 +1,16 @@
+{
+  "slug": "projects/snpt",
+  "period": "2015 / 2016",
+  "role": "Fullstack developer",
+  "client": {
+    "name": "Italian National School for Personal Training",
+    "description": "SNPT is the italian leading school that trains personal trainers with scientific method."
+  },
+  "status": "released",
+  "isPrivate": true,
+  "description": [
+    "I developed the website of the school that allow students to subscribe and pay for courses and workshops. In addition, I also developed the entire back office application and the API layer using Ruby On Rails. 100% of the company earnings come from this system.",
+    "This was the first project I made using React. There were no CRA or boilerplates yet (when I started this, the prophet Dan Abramov didn’t work at Facebook yet), so it’s bundled with Webpack and Gulp and deployed with Capistrano."
+  ],
+  "tags": ["javascript", "react", "ruby on rails"]
+}

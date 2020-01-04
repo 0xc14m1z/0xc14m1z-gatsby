@@ -1,0 +1,16 @@
+{
+  "slug": "projects/operaclick",
+  "period": "2018 / 2019",
+  "role": "Fullstack developer",
+  "client": {
+    "name": "OperaClick.com",
+    "description": "OperaClick is the italian leading online opera daily magazine, with more than 50k monthly active users and over 500k messages of the forum."
+  },
+  "status": "in development",
+  "isPrivate": false,
+  "description": [
+    "I am leading the design of the application and building the frontend of both the website and the custom content management system.",
+    "The focus is to provide a better and more modern user experience, in order to increase advertising revenues by keeping users engaged longer."
+  ],
+  "tags": ["javascript", "react", "redux", "redux-saga", "styled-components", "storybook", "ruby on rails", "aws"]
+}

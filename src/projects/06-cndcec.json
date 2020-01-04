@@ -1,0 +1,16 @@
+{
+  "slug": "projects/cndcec",
+  "period": "2018",
+  "role": "Frontend developer",
+  "client": {
+    "name": "National Council of Chartered Accountants and Accounting Experts",
+    "description": "The CNDCEC is an italian institution that acts as the interlocutor between the accountants, and therefore businesses, and the Minisitry of Economy and Finance."
+  },
+  "status": "released",
+  "isPrivate": true,
+  "description": [
+    "I led the design of the application and the development of its frontend side.",
+    "The application allows the Board of the Council to monitor the progress of commissioned researches, that are going to be presented to the Minisitry of Economy and Finance."
+  ],
+  "tags": ["javascript", "react", "redux", "redux-thunk", "blueprint js"]
+}

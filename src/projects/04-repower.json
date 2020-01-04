@@ -1,0 +1,15 @@
+{
+  "slug": "projects/repower",
+  "period": "2018",
+  "role": "Frontend mentor and consultant developer",
+  "client": {
+    "name": "Repower via Nexus Advanced Technologies",
+    "description": "Nexus is a company that leads the development of mid-to-enterprise solutions in northern Italy. Repower is a swiss company that produces and sells electricity."
+  },
+  "status": null,
+  "isPrivate": false,
+  "description": [
+    "I have been asked to design and setup the application at the very beginning, and to mentor five Java developers for 6 months in their journey to React application development."
+  ],
+  "tags": ["javascript", "react", "redux", "redux-thunk"]
+}

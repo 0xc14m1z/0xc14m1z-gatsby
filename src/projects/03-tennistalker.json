@@ -1,0 +1,15 @@
+{
+  "slug": "projects/tennistalker",
+  "period": "2017",
+  "role": "Frontend developer",
+  "client": {
+    "name": "Tennistalker srl",
+    "description": "Tennistalker is the VC backed up startup behind the italian biggest and detailed website for tennis amateur players matches results, with more than 100k monthly active users."
+  },
+  "status": "released",
+  "isPrivate": false,
+  "description": [
+    "I started the development of the frontend with the general infrastructure set up."
+  ],
+  "tags": ["javascript", "react", "redux", "redux-thunk"]
+}

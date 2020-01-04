@@ -1,0 +1,15 @@
+{
+  "slug": "projects/flowtech",
+  "period": "2018",
+  "role": "Frontend developer",
+  "client": {
+    "name": "Flow Tech srls",
+    "description": "FlowTech is a startup that aims to provide a more engaging and rewarding way of interaction between social media influencers and their followers."
+  },
+  "status": "released",
+  "isPrivate": false,
+  "description": [
+    "I developed the React + WebRTC application that allows influencers to have video conference calls with rewarded followers with every device that supports WebRTC."
+  ],
+  "tags": ["javascript", "react", "webrtc", "nodejs"]
+}

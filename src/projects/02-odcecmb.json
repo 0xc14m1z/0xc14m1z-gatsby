@@ -1,0 +1,16 @@
+{
+  "slug": "projects/odcecmb",
+  "period": "2016 / 2017",
+  "role": "Frontend developer",
+  "client": {
+    "name": "Order of Chartered Accountants and Accounting Export of Monza and Brianza",
+    "description": "The ODCECMB is the institution that coordinates the relationship between the accountants of the province of Monza and Brianza with the nation-wide Council."
+  },
+  "status": "released",
+  "isPrivate": true,
+  "description": [
+    "I lead the design of the entire application and the development of the frontend.",
+    "The application allows the Board of the Order to track all the employees activities and precisely calculate costs, so that they can be charged to the proper commissioner."
+  ],
+  "tags": ["javascript", "react"]
+}
