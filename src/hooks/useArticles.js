@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const query = graphql `
   query {
-    allMdx {
+    allMdx(sort: {fields: frontmatter___position, order: DESC}) {
       nodes {
         frontmatter {
           title
@@ -18,7 +18,7 @@ const query = graphql `
 
 const useArticles = () => {
   const data = useStaticQuery(query)
-  return data.allMdx.nodes.reverse().map(article => ({
+  return data.allMdx.nodes.map(article => ({
     title: article.frontmatter.title,
     excerpt: article.frontmatter.excerpt,
     slug: article.frontmatter.slug,

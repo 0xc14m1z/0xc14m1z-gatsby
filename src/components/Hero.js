@@ -15,7 +15,7 @@ const Container = styled.div `
   align-items: center;
   &:after {
     display: block;
-    margin: 1.5em 0 4em 0;
+    margin: 1.5em 0 3em 0;
     content: "•";
     color: ${ props => props.theme.colors.border };
     text-align: center;

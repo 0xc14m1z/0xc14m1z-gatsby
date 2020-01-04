@@ -7,9 +7,9 @@ import Link from './Link'
 import Tags from './Tags'
 import WorkInProgress from './WorkInProgress'
 
-const Container = styled.div `
+const Container = styled.article `
   margin: 0;
-  &:after {
+  &:not(:last-child):after {
     display: block;
     margin: 1.5rem 0;
     content: "•";
@@ -25,7 +25,7 @@ const H2 = styled(BaseH2) `
 const Excerpt = styled.p `
   margin: 0 0 1rem 0;
   color: ${ props => props.theme.colors.text };
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 `
 
 const ArticleTeaser = ({ isWorkInProgress, slug, title, excerpt, tags }) => (
