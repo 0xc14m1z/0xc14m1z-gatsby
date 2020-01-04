@@ -6,6 +6,7 @@ module.exports = {
     author: 'Luca Ramundo'
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-json',
     {
@@ -15,9 +16,21 @@ module.exports = {
         path: `${__dirname}/src/projects`
       }
     },
-    'gatsby-plugin-styled-components',
-    // 'gatsby-transformer-sharp',
-    // 'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/articles/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: `${__dirname}/src/components/Layout.js`
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -30,8 +43,5 @@ module.exports = {
         icon: 'src/images/photo.jpg'
       }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ]
 }
