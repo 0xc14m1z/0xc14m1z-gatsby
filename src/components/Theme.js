@@ -16,7 +16,8 @@ const theme = {
   viewport: {
     maxWidth: '768px',
     breakpoints: {
-      sm: '640px'
+      sm: '640px',
+      xs: '320px'
     }
   }
 }
