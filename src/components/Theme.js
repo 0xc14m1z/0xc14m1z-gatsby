@@ -12,6 +12,12 @@ const theme = {
   },
   font: {
     size: '16px'
+  },
+  viewport: {
+    maxWidth: '768px',
+    breakpoints: {
+      sm: '640px'
+    }
   }
 }
 

@@ -13,6 +13,7 @@ import GlobalStyle from './GlobalStyle'
 import Theme from './Theme'
 
 import Header from './Header'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
+      <Footer />
     </Theme>
   )
 }
