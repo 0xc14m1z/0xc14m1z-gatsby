@@ -2,7 +2,7 @@ import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
 
-import { Link } from 'gatsby'
+import Link from './Link'
 import Icon from './Icon'
 
 const Container = styled.header `

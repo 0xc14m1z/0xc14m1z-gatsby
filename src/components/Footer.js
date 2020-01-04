@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Link as BaseLink } from 'gatsby'
+import BaseLink from './Link'
 import Icon from './Icon'
 
 const Container = styled.footer `
