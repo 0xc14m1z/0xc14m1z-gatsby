@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     font-family: 'Nunito', sans-serif;
+    font-size: ${props => props.theme.font.size};
   }
 `
 
