@@ -7,6 +7,8 @@ import Link from './Link'
 import Tags from './Tags'
 import WorkInProgress from './WorkInProgress'
 
+import articlePath from '../helpers/articlePath'
+
 const Container = styled.article `
   margin: 0;
   &:not(:last-child):after {
@@ -31,7 +33,7 @@ const Excerpt = styled.p `
 const ArticleTeaser = ({ isWorkInProgress, slug, title, excerpt, tags }) => (
   <Container>
     { isWorkInProgress && <WorkInProgress /> }
-    <H2><Link to={ `/articles/${slug}` }>{ title }</Link></H2>
+    <H2><Link to={ articlePath(slug) }>{ title }</Link></H2>
     <Excerpt>{ excerpt }</Excerpt>
     <Tags tags={ tags } />
   </Container>
