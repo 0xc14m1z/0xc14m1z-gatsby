@@ -45,7 +45,7 @@ There are at least three packages that needs to be installed:
 
 To get the first, just type:
 
-```
+```bash
 npm install --save @fortawesome/react-fontawesome
 ```
 
@@ -79,7 +79,7 @@ To create a library for those icons, we need to:
 2. import the icons that we want from the proper package;
 3. add these icons to the library;
 
-```js
+```jsx
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
@@ -124,8 +124,9 @@ library.add(
   faInfoCircle
 )
 
-const Icon = props =>
+const Icon = props => (
   <FontAwesomeIcon { ...props } />
+)
 
 Icon.propTypes = {
   icon: t.oneOf([
