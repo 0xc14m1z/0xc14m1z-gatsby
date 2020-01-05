@@ -1,16 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
 
 import GlobalStyle from './GlobalStyle'
 import Theme from './Theme'
+import MarkdownTheme from './MarkdownTheme'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -34,7 +28,11 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Container>
         <Header title={ title } />
-        <Main>{ children }</Main>
+        <MarkdownTheme>
+          <Main>
+            { children }
+          </Main>
+        </MarkdownTheme>
         <Footer />
       </Container>
     </Theme>

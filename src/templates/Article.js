@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
@@ -9,6 +10,9 @@ import Tags from '../components/Tags'
 import WorkInProgress from '../components/WorkInProgress'
 
 const Container = styled.article ``
+const Header = styled.header `
+  margin-bottom: 2rem;
+`
 
 export const query = graphql `
   query($slug: String!) {
@@ -33,9 +37,11 @@ const Article = ({ data: { mdx: article } }) => {
     <Layout>
       <SEO title={ title } description={ excerpt } />
       <Container>
-        { isWorkInProgress && <WorkInProgress /> }
-        <H1>{ title }</H1>
-        <Tags tags={ tags } />
+        <Header>
+          { isWorkInProgress && <WorkInProgress /> }
+          <H1>{ title }</H1>
+          <Tags tags={ tags } />
+        </Header>
         <MDXRenderer>{ content }</MDXRenderer>
       </Container>
     </Layout>
