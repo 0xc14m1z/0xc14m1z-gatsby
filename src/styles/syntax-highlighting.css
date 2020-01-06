@@ -1,0 +1,173 @@
+:root {
+  --purple: #E58DFF;
+  --red: #FF7B86;
+  --green: #98CD71;
+  --white: #EEEEEE;
+  --orange: #FAC863;
+  --cyan: #6BEFFF;
+  --blue: #5FABEA;
+  --grey: #888888;
+  --background: #272B34;
+  --highlighted-background: #444955;
+  --selection: #9095A0FF;
+  --line-numbers: #666666;
+}
+
+
+code[class*="language-"],
+pre[class*="language-"],
+code,
+pre {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--background);
+  color: var(--white);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"], pre {
+  padding: 1rem;
+  margin: 0 -1rem 1rem -1rem;
+  overflow-x: auto;
+}
+
+pre[class*="language-"]
+code[class*="language-"] {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+pre[class*="language-"]::-moz-selection { background: var(--selection); }
+pre[class*="language-"]::selection { background: var(--selection); }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
+  text-shadow: none;
+  background: var(--selection);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--background);
+  padding: 0.2rem 0.4rem;
+  white-space: normal;
+}
+
+
+[class*="language-jsx"] .token.keyword            { color: var(--purple); }
+[class*="language-jsx"] .token.string             { color: var(--green); }
+[class*="language-jsx"] .token.punctuation        { color: var(--white); }
+[class*="language-jsx"] .token.operator           { color: var(--cyan); }
+[class*="language-jsx"] .token.function           { color: var(--blue); }
+[class*="language-jsx"] .token.function-variable  { color: var(--orange); }
+[class*="language-jsx"] .token.class-name         { color: var(--red); }
+[class*="language-jsx"] .token.attr-name          { color: var(--orange); }
+[class*="language-jsx"] .token.attr-value         { color: var(--green); }
+[class*="language-jsx"] .token.spread
+[class*="language-jsx"] .token.attr-value         { color: var(--white); }
+[class*="language-jsx"] .token.number             { color: var(--orange); }
+[class*="language-jsx"] .token.comment            { color: var(--grey); }
+
+
+pre:not([class="language-text"]) { padding-top: 3rem; }
+pre:not([class="language-text"])::before {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.8rem;
+}
+
+pre[class*="language-jsx"]::before {
+  content: "JS";
+  background: var(--orange);
+  color: var(--background);
+}
+
+pre[class*="language-bash"]::before {
+  content: "SHELL";
+  background: var(--blue);
+  color: var(--background);
+}
+
+pre[class*="language-"].line-numbers {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+pre[class*="language-"].line-numbers code {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+  position: static;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-right: 1rem;
+  border-right-color: var(--line-numbers);
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows span::before {
+  padding-right: 1rem;
+  color: var(--line-numbers);
+}
+
+pre[class*="language-"] .gatsby-highlight-code-line {
+  display: block;
+  background: var(--highlighted-background);
+  margin: 0 -1rem;
+  padding-left: 1rem;
+}
+
+pre[class*="language-bash"] .command-line-prompt {
+  margin: 0;
+  border: none;
+}
+
+pre[class*="language-bash"] .command-line-prompt > span:before {
+  color: var(--line-numbers);
+}
+
+pre[class*="language-bash"] .command-line-prompt > span[data-user]:before {
+  content: "$";
+}
+
+pre[class*="language-bash"] .command-line-prompt > span[data-user="root"]:before {
+  content: "#";
+}
+
+pre[class*="language-bash"] .command-line-prompt
+> span:not([data-user="__hidden__"]):not([data-host="__hidden__"]):before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+pre[class*="language-bash"] .command-line-prompt
+> span[data-user="root"]:not([data-host="__hidden__"]):before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
+}

@@ -28,7 +28,21 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: `${__dirname}/src/components/Layout.js`
-        }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '`',
+              showLineNumbers: false,
+              prompt: {
+                user: '__hidden__',
+                host: '__hidden__',
+                global: true
+              }
+            },
+          }
+        ]
       }
     },
     {
@@ -38,7 +52,7 @@ module.exports = {
         short_name: '0xc14m1z',
         start_url: '/',
         background_color: '#FFFFFF',
-        theme_color: '#930EDF',
+        theme_color: '#7C4DFF',
         display: 'minimal-ui',
         icon: 'src/images/photo.jpg'
       }
