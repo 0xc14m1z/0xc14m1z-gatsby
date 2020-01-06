@@ -14,7 +14,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faHome, faInfoCircle, faEmptySet, faFrownOpen, faGithub)
 
-const Icon = ({ name, ...props }) => <FontAwesomeIcon icon={name} {...props} />
+const Icon = ({ name, ...props }) => <FontAwesomeIcon icon={name} size="1x" {...props} />
 
 Icon.Home = props => <Icon name={['fal', 'home']} {...props} />
 
