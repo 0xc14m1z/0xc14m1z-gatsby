@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components'
 
 const theme = {
   colors: {
-    // primary: '#651fff',
     primary: '#7C4DFF',
     text: '#444444',
     lightText: '#888888',
@@ -12,15 +11,16 @@ const theme = {
     workInProgress: '#FFEB3B'
   },
   font: {
-    size: '16px'
+    size: '18px'
   },
   viewport: {
     maxWidth: '768px',
     breakpoints: {
       sm: '640px',
-      xs: '320px'
+      xs: '375px'
     }
-  }
+  },
+  separator: '•'
 }
 
 const Theme = props => <ThemeProvider theme={ theme } {...props} />

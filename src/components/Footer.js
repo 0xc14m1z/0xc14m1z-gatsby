@@ -5,9 +5,10 @@ import BaseLink from './Link'
 import Icon from './Icon'
 
 const Container = styled.footer `
-  margin-top: 4em;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
   border-top: 1px solid ${ props => props.theme.colors.border };
-  padding: 4em 1.5em 0 1.5em;
+  padding: 4rem 1.5rem 0 1.5rem;
   display: flex;
   @media screen and (max-width: ${ props => props.theme.viewport.breakpoints.sm }) {
     flex-direction: column;
@@ -16,7 +17,8 @@ const Container = styled.footer `
 
 const Text = styled.p `
   margin-top: 0;
-  font-size: 0.9em;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
   color: ${ props => props.theme.colors.lightText };
   flex-grow: 1;
   text-align: right;
@@ -26,10 +28,10 @@ const Text = styled.p `
 `
 
 const Link = styled(BaseLink) `
-  margin-right: 1.5em;
-  margin-bottom: 1em;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
   [data-icon] {
-    margin-right: 0.4em;
+    margin-right: 0.4rem;
   }
 `
 

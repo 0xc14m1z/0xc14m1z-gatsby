@@ -11,10 +11,15 @@ import articlePath from '../helpers/articlePath'
 
 const Container = styled.article `
   margin: 0;
+
+  &:first-of-type ${ BaseH2 } {
+    margin-top: 0;
+  }
+
   &:not(:last-child):after {
     display: block;
     margin: 1.5rem 0;
-    content: "•";
+    content: "${ props => props.theme.separator }";
     color: ${ props => props.theme.colors.border };
     text-align: center;
   }

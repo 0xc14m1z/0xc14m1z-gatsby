@@ -3,19 +3,21 @@ import t from 'prop-types'
 import styled from 'styled-components'
 
 import Tags from './Tags'
+import P from './P'
 
 const Container = styled.div `
   margin: 0;
-  &:after {
+  &:not(:last-child):after {
     display: block;
     margin: 1.5rem 0;
-    content: "•";
+    content: "${ props => props.theme.separator }";
     color: ${ props => props.theme.colors.border };
     text-align: center;
   }
 `
 
 const Period = styled.span `
+  color: ${ props => props.theme.colors.text };
   @media screen and (max-width: ${ props => props.theme.viewport.breakpoints.xs }) {
     display: block;
   }
@@ -39,19 +41,22 @@ const PrivateApplication = styled.span.attrs({ children: 'private application' }
 `
 
 const Role = styled.h3 `
+  color: ${ props => props.theme.colors.text };
   margin: 0.4rem 0;
 `
 
-const ClientName = styled.p `
+const ClientName = styled(P) `
   margin-top: 0;
 `
 
-const ClientDescription = styled.p `
+const ClientDescription = styled(P) `
+  font-size: 0.8rem;
+  margin-top: -0.8rem;
   color: ${ props => props.theme.colors.lightText };
 `
 
 const Description = ({ lines }) =>
-  lines.map((line, index) => <p key={ index }>{ line }</p>)
+  lines.map((line, index) => <P key={ index }>{ line }</P>)
 
 const Project = ({
   slug,

@@ -9,14 +9,14 @@ import BaseLink from './Link'
 import Icon from './Icon'
 
 const Container = styled.div `
-  margin-top: 50px;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   &:after {
     display: block;
-    margin: 1.5em 0 3em 0;
-    content: "•";
+    margin: 2em 0;
+    content: "${ props => props.theme.separator }";
     color: ${ props => props.theme.colors.border };
     text-align: center;
   }
@@ -26,7 +26,7 @@ const Photo = styled.img `
   width: 72px;
   height: 72px;
   border-radius: 72px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 `
 
 const H1 = styled(BaseH1) `
@@ -35,11 +35,11 @@ const H1 = styled(BaseH1) `
 `
 
 const H2 = styled(BaseH2) `
-  margin: 1em 0;
-  max-width: 400px;
-  font-size: 1em;
+  margin: 0.5rem 0 1rem 0;
+  max-width: 450px;
+  font-size: 1rem;
   font-weight: normal;
-  color: black;
+  color: ${ props => props.theme.colors.text };
   text-align: center;
 `
 
@@ -54,7 +54,7 @@ const Hero = () => (
     <Link to="/resume">
       <Photo src={ photo } alt="Luca Ramundo" />
     </Link>
-    <H1>Luca Ramundo</H1>
+    <H1>Hi, I'm Luca!</H1>
     <H2>
       I'm an experienced Frontend Developer with more than ten years of full
       stack projects behind me as a freelance.

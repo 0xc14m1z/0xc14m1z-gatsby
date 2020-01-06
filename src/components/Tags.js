@@ -9,11 +9,11 @@ const Ul = styled.ul `
 
 const Tag = styled.li `
   display: inline-block;
-  padding: 0.5rem 1rem;
-  font-family: monospace;
-  font-size: 0.8em;
+  padding: 0.3rem 0.5rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.75em;
   line-height: 1;
-  background: #EEE;
+  background: ${ props => props.theme.colors.background };
   color: ${ props => props.theme.colors.lightText };
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
