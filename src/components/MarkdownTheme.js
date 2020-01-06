@@ -7,6 +7,9 @@ import BaseH2 from './H2'
 import P from './P'
 import Hr from './Hr'
 import Ol from './Ol'
+import Ul from './Ul'
+import Li from './Li'
+import Link from './Link'
 
 const H2 = styled(BaseH2) `
   margin-top: 3rem;
@@ -18,7 +21,10 @@ const components = {
   h2: H2,
   p: P,
   hr: Hr,
-  ol: Ol
+  ol: Ol,
+  ul: Ul,
+  li: Li,
+  a: Link
 }
 
 const MarkdownTheme = ({ children }) => (

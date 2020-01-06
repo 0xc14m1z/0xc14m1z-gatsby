@@ -5,6 +5,7 @@ import { Link as BaseLink } from 'gatsby'
 
 const style = css `
   text-decoration: none;
+  word-break: break-word;
 
   @media (hover: hover) {
     &:hover {
@@ -25,9 +26,13 @@ const StyledLink = styled(BaseLink) `
 const isExternal = url =>
   url.startsWith('http')
 
-const Link = ({ to, ...props }) =>
-  isExternal(to)
-    ? <StyledA href={ to } { ...props } />
-    : <StyledLink to={ to } { ...props } />
+const Link = ({ to, href, ...props }) => {
+  const destination = to || href
+  return (
+    isExternal(destination)
+      ? <StyledA href={ destination } { ...props } />
+    : <StyledLink to={ destination } { ...props } />
+  )
+}
 
 export default Link

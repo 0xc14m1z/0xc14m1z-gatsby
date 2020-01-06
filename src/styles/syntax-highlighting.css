@@ -13,26 +13,39 @@
   --line-numbers: #666666;
 }
 
-
-code[class*="language-"],
-pre[class*="language-"],
-code,
-pre {
+pre[class*="language-"] {
   position: relative;
-  padding: 0.5rem;
+  padding: 1rem;
+  margin: 0 -1rem 1rem -1rem;
+  overflow-x: auto;
+  display: flex;
   border-radius: 5px;
   background: var(--background);
+}
+
+pre[class*="language-"]::-moz-selection { background: var(--selection); }
+pre[class*="language-"]::selection { background: var(--selection); }
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection {
+  text-shadow: none;
+  background: var(--selection);
+}
+
+code[class*="language-"] {
+  flex-grow: 1;
+  flex-shrink: 0;
+
   color: var(--white);
   font-family: 'Source Code Pro', monospace;
   font-size: 0.9rem;
+  -webkit-text-size-adjust: none;
   font-feature-settings: normal;
+  line-height: 1.5;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
-  margin-bottom: 0;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -44,51 +57,31 @@ pre {
   hyphens: none;
 }
 
-/* Code blocks */
-pre[class*="language-"], pre {
-  padding: 1rem;
-  margin: 0 -1rem 1rem -1rem;
-  overflow-x: auto;
-}
-
-pre[class*="language-"]
-code[class*="language-"] {
-  background: none;
-  padding: 0;
-  margin: 0;
-}
-
-pre[class*="language-"]::-moz-selection { background: var(--selection); }
-pre[class*="language-"]::selection { background: var(--selection); }
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
-  text-shadow: none;
-  background: var(--selection);
-}
-
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   border-radius: 5px;
   background: var(--white);
+  font-size: 0.8rem;
+  -webkit-text-size-adjust: none;
   color: var(--background);
   padding: 0.2rem 0.4rem;
   white-space: normal;
 }
 
 
-[class*="language-jsx"] .token.keyword            { color: var(--purple); }
-[class*="language-jsx"] .token.string             { color: var(--green); }
-[class*="language-jsx"] .token.punctuation        { color: var(--white); }
-[class*="language-jsx"] .token.operator           { color: var(--cyan); }
-[class*="language-jsx"] .token.function           { color: var(--blue); }
-[class*="language-jsx"] .token.function-variable  { color: var(--orange); }
-[class*="language-jsx"] .token.class-name         { color: var(--red); }
-[class*="language-jsx"] .token.attr-name          { color: var(--orange); }
-[class*="language-jsx"] .token.attr-value         { color: var(--green); }
-[class*="language-jsx"] .token.spread
-[class*="language-jsx"] .token.attr-value         { color: var(--white); }
-[class*="language-jsx"] .token.number             { color: var(--orange); }
-[class*="language-jsx"] .token.comment            { color: var(--grey); }
+[class*="language-js"] .token.keyword            { color: var(--purple); }
+[class*="language-js"] .token.string             { color: var(--green); }
+[class*="language-js"] .token.punctuation        { color: var(--white); }
+[class*="language-js"] .token.operator           { color: var(--cyan); }
+[class*="language-js"] .token.function           { color: var(--blue); }
+[class*="language-js"] .token.function-variable  { color: var(--orange); }
+[class*="language-js"] .token.class-name         { color: var(--red); }
+[class*="language-js"] .token.attr-name          { color: var(--orange); }
+[class*="language-js"] .token.attr-value         { color: var(--green); }
+[class*="language-js"] .token.spread
+[class*="language-js"] .token.attr-value         { color: var(--white); }
+[class*="language-js"] .token.number             { color: var(--orange); }
+[class*="language-js"] .token.comment            { color: var(--grey); }
 
 
 pre:not([class="language-text"]) { padding-top: 3rem; }
@@ -100,9 +93,10 @@ pre:not([class="language-text"])::before {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 0.8rem;
+  -webkit-text-size-adjust: none;
 }
 
-pre[class*="language-jsx"]::before {
+pre[class*="language-js"]::before {
   content: "JS";
   background: var(--orange);
   color: var(--background);
@@ -116,17 +110,11 @@ pre[class*="language-bash"]::before {
 
 pre[class*="language-"].line-numbers {
   padding-left: 1rem;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-pre[class*="language-"].line-numbers code {
-  flex-grow: 1;
-  flex-shrink: 0;
 }
 
 pre[class*="language-"].line-numbers .line-numbers-rows {
   position: static;
+  order: -1;
   flex-grow: 0;
   flex-shrink: 1;
   margin-right: 1rem;
@@ -136,6 +124,11 @@ pre[class*="language-"].line-numbers .line-numbers-rows {
 pre[class*="language-"].line-numbers .line-numbers-rows span::before {
   padding-right: 1rem;
   color: var(--line-numbers);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  font-feature-settings: normal;
+  -webkit-text-size-adjust: none;
+  line-height: 1.5;
 }
 
 pre[class*="language-"] .gatsby-highlight-code-line {
