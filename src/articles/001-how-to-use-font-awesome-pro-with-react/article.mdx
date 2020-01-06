@@ -53,13 +53,13 @@ In order to optimize the final bundle size, it's important to use the SVG versio
 
 However, to get the second package, install it with:
 
-```
+```bash
 npm install --save @fortawesome/fontawesome-svg-core
 ```
 
 The last package that you need is the one with the actual icons. As I said before, I usually use the _light_ version, thereby I install:
 
-```
+```bash
 npm install --save @fortawesome/pro-light-svg-icons
 ```
 
@@ -109,10 +109,11 @@ The thing I feel missing, only from the point of view of my projects, is that it
 
 For this reason, I like to have a wrapper component alongside the library definition that adds this warning to the user using the `prop-types` package.
 
-```jsx
+```jsx{numberLines: true}
 import React from 'react'
 import t from 'prop-types'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import {
   faHome,
@@ -124,9 +125,8 @@ library.add(
   faInfoCircle
 )
 
-const Icon = props => (
-  <FontAwesomeIcon { ...props } />
-)
+const Icon = props =>
+  <FontAwesomeIcon {...props} />
 
 Icon.propTypes = {
   icon: t.oneOf([
