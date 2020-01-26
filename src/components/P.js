@@ -5,6 +5,7 @@ const P = styled.p `
   color: ${ props => props.theme.colors.text };
   line-height: 1.625;
   margin-bottom: 1rem;
+  text-align: justify;
 `
 
 export default P
