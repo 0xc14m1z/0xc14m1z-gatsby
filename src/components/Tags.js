@@ -10,7 +10,7 @@ const Ul = styled.ul `
 const Tag = styled.li `
   display: inline-block;
   padding: 0.3rem 0.5rem;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.75em;
   line-height: 1;
   background: ${ props => props.theme.colors.background };

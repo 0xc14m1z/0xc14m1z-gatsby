@@ -11,6 +11,9 @@
   --highlighted-background: #444955;
   --selection: #9095A0FF;
   --line-numbers: #666666;
+
+  --shell: #5FABEA;
+  --javascript: #F3DF49;
 }
 
 pre[class*="language-"] {
@@ -36,7 +39,7 @@ code[class*="language-"] {
   flex-shrink: 0;
 
   color: var(--white);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   -webkit-text-size-adjust: none;
   font-feature-settings: normal;
@@ -83,6 +86,8 @@ code[class*="language-"] {
 [class*="language-js"] .token.number             { color: var(--orange); }
 [class*="language-js"] .token.comment            { color: var(--grey); }
 
+pre[class*="language-text"] { background: var(--white); }
+pre[class*="language-text"] code { color: var(--background); }
 
 pre:not([class="language-text"]) { padding-top: 3rem; }
 pre:not([class="language-text"])::before {
@@ -92,19 +97,20 @@ pre:not([class="language-text"])::before {
   padding: 0.25rem 0.75rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
   -webkit-text-size-adjust: none;
 }
 
 pre[class*="language-js"]::before {
   content: "JS";
-  background: var(--orange);
+  background: var(--javascript);
   color: var(--background);
 }
 
 pre[class*="language-bash"]::before {
   content: "SHELL";
-  background: var(--blue);
+  background: var(--shell);
   color: var(--background);
 }
 
@@ -124,7 +130,7 @@ pre[class*="language-"].line-numbers .line-numbers-rows {
 pre[class*="language-"].line-numbers .line-numbers-rows span::before {
   padding-right: 1rem;
   color: var(--line-numbers);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   font-feature-settings: normal;
   -webkit-text-size-adjust: none;

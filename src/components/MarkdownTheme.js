@@ -10,6 +10,7 @@ import Ol from './Ol'
 import Ul from './Ul'
 import Li from './Li'
 import Link from './Link'
+import Mark from './Mark'
 
 const H2 = styled(BaseH2) `
   margin-top: 3rem;
@@ -24,7 +25,8 @@ const components = {
   ol: Ol,
   ul: Ul,
   li: Li,
-  a: Link
+  a: Link,
+  mark: Mark
 }
 
 const MarkdownTheme = ({ children }) => (
