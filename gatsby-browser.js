@@ -1,5 +1,5 @@
 import 'typeface-nunito'
-import 'typeface-source-code-pro'
+import './src/styles/fonts.css'
 
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import 'prismjs/plugins/command-line/prism-command-line.css'
