@@ -48,12 +48,16 @@ const StyledLink = styled(BaseLink) `
   display: flex;
 `
 
-const Link = ({ to, children }) => (
-  <StyledLink to={ to.startsWith('#') ? `${window.location.href}${to}` : to }>
-    <Icon.RightArrow />
-    { children }
-  </StyledLink>
-)
+const Link = ({ to, children }) => {
+  const baseUrl = typeof window !== 'undefined' ? window.location.href : ''
+  const destination = to.startsWith('#') ? `${baseUrl}${to}` : to
+  return (
+    <StyledLink to={ destination }>
+      <Icon.RightArrow />
+      { children }
+    </StyledLink>
+  )
+}
 
 const Question = ({ children }) => (
   <Container>

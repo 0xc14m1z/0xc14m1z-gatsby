@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Link as BaseLink } from 'gatsby'
-import Icon from './Icon'
 
 const style = css `
   text-decoration: none;
