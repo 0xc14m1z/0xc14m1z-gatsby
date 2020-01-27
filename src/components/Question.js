@@ -41,6 +41,7 @@ const Container = styled.div `
 const Title = styled.h4 `
   margin-top: 0px;
   margin-bottom: 1rem;
+  color: ${ props => props.theme.colors.text };
 `
 
 const StyledLink = styled(BaseLink) `
