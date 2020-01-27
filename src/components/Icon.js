@@ -7,12 +7,13 @@ import {
   faHome,
   faInfoCircle,
   faEmptySet,
-  faFrownOpen
+  faFrownOpen,
+  faArrowCircleRight
 } from '@fortawesome/pro-light-svg-icons'
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faHome, faInfoCircle, faEmptySet, faFrownOpen, faGithub)
+library.add(faHome, faInfoCircle, faEmptySet, faFrownOpen, faGithub, faArrowCircleRight)
 
 const Icon = ({ name, ...props }) => <FontAwesomeIcon icon={name} size="1x" {...props} />
 
@@ -25,5 +26,7 @@ Icon.GitHub = props => <Icon name={['fab', 'github']} {...props} />
 Icon.Empty = props => <Icon name={['fal', 'empty-set']} {...props} />
 
 Icon.NotFound = props => <Icon name={['fal', 'frown-open']} {...props} />
+
+Icon.RightArrow = props => <Icon name={['fal', 'arrow-circle-right']} {...props} />
 
 export default Icon

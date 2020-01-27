@@ -8,7 +8,8 @@ const theme = {
     lightText: '#888888',
     border: '#DDDDDD',
     background: '#EEEEEE',
-    workInProgress: '#FFEB3B'
+    workInProgress: '#FFEB3B',
+    blue: '#5FABEA'
   },
   font: {
     size: '18px'
@@ -20,7 +21,10 @@ const theme = {
       xs: '375px'
     }
   },
-  separator: '•'
+  separator: '•',
+  border: {
+    radius: '5px'
+  }
 }
 
 const Theme = props => <ThemeProvider theme={ theme } {...props} />

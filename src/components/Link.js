@@ -2,10 +2,12 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Link as BaseLink } from 'gatsby'
+import Icon from './Icon'
 
 const style = css `
   text-decoration: none;
   word-break: break-word;
+  line-height: 1.625;
 
   @media (hover: hover) {
     &:hover {
